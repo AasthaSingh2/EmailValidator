@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validator - iValidate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="img/email.svg" alt="Email Logo" width="30"> <!-- Logo -->
+                <span>iValidate</span> <!-- Brand Name -->
+            </div>
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="container">
+            <h1>Email Validator</h1>
+            <!-- Email Validation Form -->
+            <form id="validateForm" aria-labelledby="emailValidatorForm">
+                <!-- Email Input Field -->
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required aria-describedby="emailFeedback">
+                <span id="emailFeedback" class="feedback"></span><br><br>
+
+                <!-- Validate Button -->
+                <button id="validateBtn" class="btn" type="button">Validate Email</button>
+            </form>
+        </div>
+        
+        <!-- Loading Image (Initially Hidden) -->
+        <div id="loading" style="display: none;" aria-live="polite">
+            <img src="img/loading.gif" alt="Loading..." width="50"> <!-- Your loading image -->
+        </div>
+
+        <!-- Result Display Section -->
+        <div class="container">
+            <h2>Validation Results</h2>
+            <div id="resultContainer">
+                <!-- Validation results will appear here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <button id="themeToggle" aria-label="Toggle Dark Mode">Toggle Dark Mode</button> 
+        <p>Copyright © iValidate.com | All Rights Reserved</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="index.js"></script>
+    <script src="emailValidation.js"></script>
+
+
+</body>
+</html>
